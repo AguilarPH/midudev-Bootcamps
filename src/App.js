@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 
+const  Mensaje = () => {
+    return <h1>Hola Mundo</h1>
+}
+
+const Description = (props) => {
+    return <p><strong style={{color: props.color}}>{props.message}</strong></p>
+}
 function App() {
+    const a = 2
+    const b = 3
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Mensaje/>
+        <Description color='red' message='Estamos trabajando'/>
+        <Description color='green' message='En un curso de'/>
+        <Description color='yellow' message='React'/>
+        <div>
+            <p>El resultado es:</p>
+            {a + b}
+        </div>
     </div>
   );
 }
